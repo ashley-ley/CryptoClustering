@@ -8,21 +8,30 @@ We utilize cryptocurrency market data from a CSV file named "crypto_market_data.
 ## Analysis Steps
 1. Data Preprocessing
 + I start by loading the data into a Pandas DataFrame and perform data preprocessing, including:
-+ Handling missing values by using pd.to_numeric() with errors='coerce'.
-+ Normalizing the data using the StandardScaler module from scikit-learn.
+  + Handling missing values by using pd.to_numeric() with errors='coerce'.
+  + Normalizing the data using the StandardScaler module from scikit-learn.
   
 2. K-Means Clustering
 + I apply the K-Means clustering algorithm to group cryptocurrencies into clusters. Key steps include:
-++ Determining the optimal number of clusters (k) using the elbow method.
-++ Initializing the K-Means model with the chosen value of k.
-++ Adding a new column to the DataFrame with the predicted clusters.
-++ Visualizing the clusters using a scatter plot with hvPlot.
+  + Determining the optimal number of clusters (k) using the elbow method. The optimal k_value for both datasets was 4.
+    
+  + ![image](https://github.com/ashley-ley/CryptoClustering/assets/132225987/ef1beb9f-0e5a-4be7-b23a-f8cce6a32dfd)
+  + Initializing the K-Means model with the chosen value of k.
+  + Adding a new column to the DataFrame with the predicted clusters.
+  + Visualizing the clusters using a scatter plot with hvPlot.
+ 
+  + ![image](https://github.com/ashley-ley/CryptoClustering/assets/132225987/d6228718-ca64-4788-9c56-a3ae0d6438d9)
+
 
 3. Principal Component Analysis (PCA)
 + To reduce the dimensionality of the data and discover underlying patterns, we use PCA:
-++ Performing PCA to reduce the data to three principal components.
-++ Creating a DataFrame with the PCA results.
-++ Visualizing the PCA results to identify relationships between cryptocurrencies.
+  + Performing PCA to reduce the data to three principal components.
+  + Creating a DataFrame with the PCA results.
+  + Visualizing the PCA results to identify relationships between cryptocurrencies and predicting the number of clusters
+    
+    ![image](https://github.com/ashley-ley/CryptoClustering/assets/132225987/ddeaae71-349e-49c8-a1c4-58a0a2701138)
+
+
 
 ## Usage
 To replicate this analysis, follow these steps:
